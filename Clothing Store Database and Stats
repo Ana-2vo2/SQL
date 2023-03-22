@@ -1,0 +1,21 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
+
+INSERT INTO store VALUES (1, "Oversized T-shirts", 12.99, 6, 4);
+Insert INTO store VALUES (2, "Polo Tops", 10.99, 3, 4);
+INSERT INTO store VALUES (3, "Crop Tops", 4.99, 4, 4);
+INSERT INTO store VALUES (4, "Vests", 5.99, 4, 4);
+INSERT INTO store VALUES (5, "Blouse", 8.99, 2, 4);
+INSERT INTO store VALUES (6, "Skinny Jeans", 15.99, 4, 7);
+INSERT INTO store VALUES (7, "Cargo Pants", 17.99, 2, 7);
+INSERT INTO store VALUES (8, "Flare Jeans", 16.99, 4, 7);
+INSERT INTO store VALUES (9, "Denim Shorts", 12, 2, 7);
+INSERT INTO store VALUES (10, "Joggers", 9, 3, 6);
+INSERT INTO store VALUES (11, "Jumpers", 10, 4, 6);
+INSERT INTO store VALUES (12, "Hoodies", 12, 4, 6);
+INSERT INTO store VALUES (13, "Trainers", 21.99, 2, 8);
+INSERT INTO store VALUES (14, "Boots", 26, 2,8);
+INSERT INTO store VALUES (15, "Sliders", 11, 1, 8);
+
+SELECT name, SUM(price) FROM store GROUP BY price;
+
+SELECT * FROM store WHERE aisle > 4 ORDER BY aisle;
